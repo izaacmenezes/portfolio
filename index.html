@@ -345,7 +345,7 @@
 
         .case-grid {
             display: grid;
-            grid-template-columns: 1.2fr 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: start;
         }
@@ -569,7 +569,7 @@
                     <h1>Izaac dos Santos <span>Menezes</span></h1>
                     <div class="hero-subtitle">Especialista em TI & Infraestrutura de Redes</div>
                     <p class="hero-description">
-                        Focado em arquitetura de infraestrutura escalável, cloud computing, automação DevOps e alta disponibilidade de sistemas de telecomunicações críticos.
+                        Especialista em arquitetura de infraestrutura escalável, cloud computing, automação DevOps e alta disponibilidade de sistemas de telecomunicações críticos. [cite: 8, 10, 16]
                     </p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">Analisar Projetos</a>
@@ -590,52 +590,32 @@
                 <div class="about-layout">
                     <div class="about-text">
                         <p>
-                            Especialista em TI focado em infraestrutura escalável, telecomunicações e segurança de redes. Possuo experiência sólida em administração de clusters Kubernetes, automação de ambientes com Docker, orquestração de tráfego, gestão avançada de backups corporativos e monitoramento preventivo.
+                            Especialista em TI focado em infraestrutura escalável, telecomunicações e segurança de redes. [cite: 8] Possuo experiência sólida em administração de clusters Kubernetes, automação de ambientes virtuais, orquestração de tráfego, gestão avançada de backups corporativos e monitoramento preventivo. [cite: 9, 17, 18, 29]
                         </p>
                         <p>
-                            Minha abordagem visa liderar soluções técnicas eficientes e independentes, assegurando alta disponibilidade, continuidade de negócios sob rígidos acordos de nível de serviço (SLA) e performance tecnológica de ponta.
+                            Minha abordagem visa liderar soluções técnicas eficientes e independentes, assegurando alta disponibilidade, continuidade de negócios sob rígidos acordos de nível de serviço (SLA) e performance tecnológica de ponta. [cite: 10, 26, 37]
                         </p>
                     </div>
                     <div class="about-skills">
                         <div class="skills-group">
                             <h3>Infra & Orquestração</h3>
                             <div class="skills-tags">
-                                <span class="tag">Kubernetes</span>
-                                <span class="tag">K3s</span>
-                                <span class="tag">Docker</span>
-                                <span class="tag">Proxmox</span>
-                                <span class="tag">Traefik</span>
-                                <span class="tag">Linux</span>
-                            </div>
+                                <span class="tag">Kubernetes</span> <span class="tag">K3s</span> <span class="tag">Docker</span> <span class="tag">Proxmox</span> <span class="tag">Traefik</span> <span class="tag">Linux</span> </div>
                         </div>
                         <div class="skills-group">
                             <h3>Telecom & VoIP</h3>
                             <div class="skills-tags">
-                                <span class="tag">Asterisk</span>
-                                <span class="tag">FreePBX</span>
-                                <span class="tag">OpenSIPS</span>
-                                <span class="tag">Avaya Ecosystem</span>
-                                <span class="tag">Protocolo SIP</span>
-                            </div>
+                                <span class="tag">Asterisk</span> <span class="tag">FreePBX</span> <span class="tag">OpenSIPS</span> <span class="tag">Avaya Ecosystem</span> <span class="tag">Protocolo SIP</span> </div>
                         </div>
                         <div class="skills-group">
                             <h3>Segurança & NOC</h3>
                             <div class="skills-tags">
-                                <span class="tag">pfSense</span>
-                                <span class="tag">Fortigate</span>
-                                <span class="tag">Zabbix</span>
-                                <span class="tag">Grafana</span>
-                                <span class="tag">Prometheus</span>
-                            </div>
+                                <span class="tag">pfSense</span> <span class="tag">Fortigate</span> <span class="tag">Zabbix</span> <span class="tag">Grafana</span> <span class="tag">Prometheus</span> </div>
                         </div>
                         <div class="skills-group">
                             <h3>Dev & Dados</h3>
                             <div class="skills-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">PHP</span>
-                                <span class="tag">PostgreSQL</span>
-                            </div>
+                                <span class="tag">Python</span> <span class="tag">JavaScript</span> <span class="tag">PHP</span> <span class="tag">PostgreSQL</span> </div>
                         </div>
                     </div>
                 </div>
@@ -650,29 +630,25 @@
                     <article class="case-study-card">
                         <div class="case-header">
                             <div class="case-title">
-                                <span>Case Study 01 // Orquestração</span>
-                                Alta Disponibilidade K3s para Mensageria Massiva
+                                <span>Case Study 01 // Orquestração & Observabilidade</span>
+                                Alta Disponibilidade K3s para Mensageria Massiva (NOC)
                             </div>
                         </div>
                         <div class="case-grid">
                             <div class="case-info">
                                 <h4>Cenário e Desafio</h4>
-                                <p>Arquitetar e implantar uma infraestrutura computacional capaz de sustentar uma plataforma estável de comunicação instantânea para <strong>4.000 usuários simultâneos</strong> em ambiente de alta concorrência.</p>
+                                <p>Arquitetar e implantar uma infraestrutura computacional capaz de sustentar uma plataforma estável de comunicação instantânea para <strong>4.000 usuários simultâneos</strong> em ambiente de alta concorrência. Adicionalmente, resolver a telemetria do cluster que apresentava ruídos lógicos ("No Data") nos painéis centrais. [cite: 54, 55]</p>
                                 
                                 <h4>Solução Engenharia</h4>
                                 <ul>
-                                    <li><strong>Orquestração Lógica:</strong> Deploy de cluster K3s estruturado de forma multinó, isolando de forma estrita 1 nó Control Plane (Master) e 2 nós Workers redundantes.</li>
-                                    <li><strong>Mitigação de SPOF:</strong> Aplicação estrita de regras de anti-afinidade de pods (podAntiAffinity), impedindo o agendamento de réplicas críticas no mesmo chassi físico.</li>
-                                    <li><strong>Roteamento e Sessões:</strong> Utilização do Traefik Ingress Controller configurado com <em>Sticky Sessions</em> para gerenciamento e persistência estável de conexões via WebSocket.</li>
-                                    <li><strong>Persistência Desacoplada:</strong> Isolamento da camada de dados em servidor MongoDB dedicado externo, blindando o cluster de concorrência I/O.</li>
+                                    <li><strong>Orquestração Lógica:</strong> Implantação de cluster K3s multinó estruturado com separação explícita de Control Plane (Master) e Workers. [cite: 17, 54]</li>
+                                    <li><strong>Otimização de Métricas NOC:</strong> Substituição de contadores legados e instáveis do CNI Flannel por gatilhos nativos do Kubelet (<code>Conditions: Ready</code>) via Zabbix/Grafana, mitigando falsos alarmes. [cite: 56, 57]</li>
+                                    <li><strong>Roteamento de Sessões:</strong> Utilização do Traefik Ingress Controller configurado com <em>Sticky Sessions</em> para persistência de tráfego lógico. [cite: 17]</li>
+                                    <li><strong>God Dashboard:</strong> Fusão estrutural de matrizes JSON no Grafana para consolidação unificada da saúde do Kubernetes e do motor MongoDB em uma única tela corporativa. [cite: 70, 72, 74]</li>
                                 </ul>
 
                                 <div class="case-badges">
-                                    <span class="tag">K3s Cluster</span>
-                                    <span class="tag">Traefik Ingress</span>
-                                    <span class="tag">Sticky Sessions</span>
-                                    <span class="tag">MongoDB External</span>
-                                </div>
+                                    <span class="tag">K3s Cluster</span> <span class="tag">Traefik Ingress</span> <span class="tag">Zabbix API</span> <span class="tag">Grafana State Timeline</span> </div>
                             </div>
                             <div class="case-media">
                                 <img src="https://raw.githubusercontent.com/izaacmenezes/portfolio/main/topologiaprojeto.PNG" alt="Topologia K3s Rocket.Chat">
@@ -690,21 +666,17 @@
                         <div class="case-grid">
                             <div class="case-info">
                                 <h4>Cenário e Desafio</h4>
-                                <p>Eliminar pontos cegos operacionais e tempos de resposta lentos (MTTR) em gerenciamento de incidentes de ITSM, além de garantir auditoria à prova de falhas na esteira de retenção de backups críticos corporativos.</p>
+                                <p>Eliminar pontos cegos operacionais e tempos de resposta lentos (MTTR) em gerenciamento de incidentes de ITSM, além de garantir auditoria automatizada e validação contínua na esteira de retenção de backups críticos corporativos. [cite: 26, 37]</p>
                                 
                                 <h4>Solução Engenharia</h4>
                                 <ul>
-                                    <li><strong>Engine ChatOps:</strong> Desenvolvimento de um barramento automatizado integrado nativamente à API do GLPI para despacho instantâneo de alertas de estouro de SLA (atendendo gatilhos críticos ao atingir marcas lógicas de 90%).</li>
-                                    <li><strong>Auditoria de Dados Transacionais:</strong> Scripts automatizados focados na validação cronológica e integridade de backups estruturados de banco de dados e arquivos massivos.</li>
-                                    <li><strong>Isolamento Lógico:</strong> Rotina de automação com mapeamento fim-a-fim de montagem segura em storages de blocos baseados no protocolo <strong>iSCSI</strong>.</li>
+                                    <li><strong>Engine ChatOps:</strong> Desenvolvimento de um barramento automatizado integrado à API do GLPI para despacho instantâneo de alertas de estouro de SLA (atendendo gatilhos críticos ao atingir marcas lógicas de 90%). </li>
+                                    <li><strong>Auditoria de Dados Transacionais:</strong> Scripts automatizados focados na validação cronológica e integridade de backups estruturados de banco de dados e arquivos massivos. </li>
+                                    <li><strong>Isolamento Lógico:</strong> Rotina de automação com mapeamento fim-a-fim de montagem e sincronização segura em volumes de blocos remotos baseados no protocolo <strong>iSCSI</strong>. </li>
                                 </ul>
 
                                 <div class="case-badges">
-                                    <span class="tag">GLPI API</span>
-                                    <span class="tag">ChatOps</span>
-                                    <span class="tag">iSCSI Storage</span>
-                                    <span class="tag">Automation Scripts</span>
-                                </div>
+                                    <span class="tag">GLPI API</span> <span class="tag">ChatOps Monitoring</span> <span class="tag">iSCSI Target</span> <span class="tag">SLA Governance</span> </div>
                             </div>
                             <div class="case-media">
                                 <img src="https://raw.githubusercontent.com/izaacmenezes/portfolio/main/Acompanhamento%20GLPI.png" alt="Acompanhamento Alerta SLA GLPI">
@@ -716,36 +688,31 @@
                     <article class="case-study-card">
                         <div class="case-header">
                             <div class="case-title">
-                                <span>Case Study 03 // Telecomunicações Avançadas</span>
-                                SIP AI Analyzer: Telemetria Forense de Voz sobre IP
+                                <span>Case Study 03 // Telecomunicações & Observabilidade Avançada</span>
+                                SIP AI Analyzer: Telemetria Forense de Sinalização e Logs Loki
                             </div>
                         </div>
                         <div class="case-grid">
                             <div class="case-info">
                                 <h4>Cenário e Desafio</h4>
-                                <p>Monitorar, coletar e depurar fluxos de sinalização massivos em Session Border Controllers (SBC) e servidores de comunicação unificada para identificação em tempo real de desligamentos anômalos e erros lógicos de operadora.</p>
+                                <p>Garantir a ingestão, indexação e depuração estável de logs de sinalização em servidores de comunicação e roteamento SIP (Homer), solucionando problemas críticos de estouro de armazenamento e fuso horário na janela temporal de captura de dados. [cite: 146, 175, 186]</p>
                                 
                                 <h4>Solução Engenharia</h4>
                                 <ul>
-                                    <li><strong>Ingestão de Telecom:</strong> Extração e análise em profundidade de pacotes de sinalização e métodos lógicos SIP utilizando motores de coleta de dados de alta performance.</li>
-                                    <li><strong>Parser de Causa Relatorial:</strong> Algoritmos customizados desenvolvidos para varredura e extração via Regex de cabeçalhos RFC complexos, isolando Call-IDs unificados, IPs de sinalização de origem e causas de desconexão baseadas no padrão **Q.850 (Cause Codes)**.</li>
-                                    <li><strong>Tratamento Forense de Dados:</strong> Deduplicação em tempo real de retransmissões repetidas de rede e descarte de ruído lógico, gerando relatórios consolidados e compactados de chamadas reais com baixo impacto em memória.</li>
+                                    <li><strong>Arquitetura e Escalonamento I/O:</strong> Remodelagem da stack Docker Compose (Loki, Postgres, Caddy, Prometheus) migrando o diretório raiz para partições dedicadas de grande capacidade, e criando rotinas de contingência idempotentes com interrupção forçada (<code>kill</code>) sob estresse de disco. [cite: 155, 172, 174, 181]</li>
+                                    <li><strong>Coletor Automatizado em Python:</strong> Desenvolvimento de um script parser de paginação dinâmica acoplado à API do Loki para mineração inteligente de chamadas contendo códigos de desconexão baseados no padrão <strong>Q.850 (Cause Codes)</strong>. [cite: 188, 200, 214]</li>
+                                    <li><strong>Análise Forense e Regex:</strong> Tratamento e limpeza fina de logs de sinalização utilizando Expressões Regulares estruturadas para mapear Call-IDs unificados, números de origem/destino e IPs de tráfego, limpando retransmissões repetidas através de estruturas de dados Pandas. [cite: 246, 247, 288, 290]</li>
                                 </ul>
 
                                 <div class="case-badges">
-                                    <span class="tag">SIP Protocol</span>
-                                    <span class="tag">Q.850 Cause Codes</span>
-                                    <span class="tag">Regex Engine</span>
-                                    <span class="tag">VoIP Telemetry</span>
-                                </div>
+                                    <span class="tag">SIP Sinalização</span> <span class="tag">Grafana Loki API</span> <span class="tag">Q.850 Cause Codes</span> <span class="tag">Docker Storage Migration</span> </div>
                             </div>
-                            <div class="case-media" style="display: flex; align-items: center; justify-content: center;">
-                                <div style="font-family: monospace; font-size: 0.85rem; color: #00f0ff; background: #06060a; padding: 24px; border-radius: 4px; border: 1px solid var(--border); width: 100%;">
-                                    &gt;_ Loki API Ingestion Stream<br>
-                                    &gt; method="INVITE" |~ "Reason: Q.850"<br>
-                                    &gt; Call-ID Match: Parsed successfully<br>
-                                    &gt; Output: Relatorio_Chamadas_Q850.zip
-                                </div>
+                            <div class="case-media">
+                                <img src="https://raw.githubusercontent.com/izaacmenezes/portfolio/main/SIP%20OVERVIEW.jpg" alt="SIP Overview Dashboard">
+                                <img src="https://raw.githubusercontent.com/izaacmenezes/portfolio/main/Reason%20Q.850.jpg" alt="Reason Massivo Q850 Dashboard">
+                                <img src="https://raw.githubusercontent.com/izaacmenezes/portfolio/main/INVITE%20per%20SECOND.jpg" alt="INVITE per Second Telemetry">
+                                <img src="https://raw.githubusercontent.com/izaacmenezes/portfolio/main/INVITE%20%26%20REGISTER.png" alt="INVITE and REGISTER Analytics">
+                                <img src="https://raw.githubusercontent.com/izaacmenezes/portfolio/main/RTCP.png" alt="QoS RTCP Jitter and Packet Loss">
                             </div>
                         </div>
                     </article>
@@ -765,7 +732,7 @@
                         <h3 class="timeline-title">Especialista em TI</h3>
                         <div class="timeline-company">Grupo Elo — São Luís, Maranhão</div>
                         <p class="timeline-desc">
-                            Liderança técnica e gerenciamento de infraestrutura complexa, cloud e orquestração. Administração de clusters Kubernetes (Control Plane e Workers), balanceamento de carga com Traefik Ingress e implantação de redes e arquiteturas seguras com firewalls corporativos (pfSense, Fortigate, Sophos). Responsável pela infraestrutura VoIP (Asterisk, FreePBX, Avaya) e ecossistemas de monitoramento com Zabbix, Grafana e Prometheus.
+                            Liderança técnica e gerenciamento de infraestrutura complexa, cloud e orquestração. [cite: 14, 15, 16] Administração de clusters Kubernetes (Control Plane e Workers), balanceamento de carga com Traefik Ingress e implantação de redes e arquiteturas seguras com firewalls corporativos (pfSense, Fortigate, Sophos). [cite: 17, 23] Responsável pela infraestrutura VoIP (Asterisk, FreePBX, Avaya) e ecossistemas de monitoramento com Zabbix, Grafana e Prometheus. [cite: 22, 24]
                         </p>
                     </div>
 
@@ -775,7 +742,7 @@
                         <h3 class="timeline-title">Analista de TI Pleno</h3>
                         <div class="timeline-company">Grupo Elo — São Luís, Maranhão</div>
                         <p class="timeline-desc">
-                            Foco em gestão contínua de redes, segurança de borda e implantação de soluções de telecomunicação de alta disponibilidade. Desenvolvimento de painéis de observabilidade integrados, além de scripts em Python e Shell para a automação de fluxos operacionais e garantia das metas de SLA estabelecidas para serviços críticos.
+                            Gestão contínua de redes lógicas, segurança de borda e administração de firewalls corporativos. [cite: 30, 31, 32] Implantação e tuning de soluções de telecomunicação de alta disponibilidade (Asterisk, FreePBX e Avaya). [cite: 33] Desenvolvimento estruturado de dashboards de observabilidade e alertas integrados, além de automação de rotinas via Python ou Shell Script. [cite: 34, 35]
                         </p>
                     </div>
 
@@ -785,7 +752,7 @@
                         <h3 class="timeline-title">Analista de TI Júnior</h3>
                         <div class="timeline-company">Grupo Elo — São Luís, Maranhão</div>
                         <p class="timeline-desc">
-                            Suporte técnico focado em Service Desk estruturado (ITSM/GLPI). Atuação no controle preventivo e corretivo de infraestrutura local de hardware, gerenciamento básico de conectividade lógica e desenvolvimento de documentações de processos para base de conhecimento.
+                            Suporte técnico em ambiente corporativo focado em Service Desk estruturado (ITSM/GLPI). Atuação no controle preventivo e corretivo de hardware, instalação/configuração de softwares e cooperação no monitoramento preventivo de ativos de rede. 
                         </p>
                     </div>
 
@@ -798,9 +765,8 @@
         <div class="container footer-layout">
             <div class="footer-text">
                 <h3>Vamos construir algo resiliente?</h3>
-                <p>Disponível para soluções de infraestrutura e engenharia de redes de alto desempenho.</p>
-                <p style="font-size: 0.9rem; margin-top: 8px; color: var(--accent);">izaac.menezes.corp@gmail.com</p>
-            </div>
+                <p>Disponível para soluções de infraestrutura, DevOps e engenharia de telecomunicações de alta performance.</p>
+                <p style="font-size: 0.9rem; margin-top: 8px; color: var(--accent);">izaac.menezes.corp@gmail.com</p> </div>
             <div class="footer-socials">
                 <a href="https://www.linkedin.com/in/izaac-menezes-800555199/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
                     <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>

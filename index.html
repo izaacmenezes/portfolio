@@ -685,6 +685,7 @@
                         </div>
                     </article>
 
+<!-- CASE STUDY 3: SIP AI ANALYZER & TELECOM NOC -->
                     <article class="case-study-card">
                         <div class="case-header">
                             <div class="case-title">
@@ -695,28 +696,27 @@
                         <div class="case-grid">
                             <div class="case-info">
                                 <h4>Cenário e Desafio</h4>
-                                <p>Garantir a ingestão, indexação e depuração estável de logs de sinalização em servidores de comunicação e roteamento SIP (Homer), solucionando problemas críticos de estouro de armazenamento e fuso horário na janela temporal de captura de dados. [cite: 146, 175, 186]</p>
+                                <p>Garantir a Ingestão, indexação e depuração estável de logs de sinalização em servidores de comunicação e roteamento SIP (Homer), solucionando problemas críticos de estouro de armazenamento e fuso horário na janela temporal de captura de dados.</p>
                                 
                                 <h4>Solução Engenharia</h4>
                                 <ul>
-                                    <li><strong>Arquitetura e Escalonamento I/O:</strong> Remodelagem da stack Docker Compose (Loki, Postgres, Caddy, Prometheus) migrando o diretório raiz para partições dedicadas de grande capacidade, e criando rotinas de contingência idempotentes com interrupção forçada (<code>kill</code>) sob estresse de disco. [cite: 155, 172, 174, 181]</li>
-                                    <li><strong>Coletor Automatizado em Python:</strong> Desenvolvimento de um script parser de paginação dinâmica acoplado à API do Loki para mineração inteligente de chamadas contendo códigos de desconexão baseados no padrão <strong>Q.850 (Cause Codes)</strong>. [cite: 188, 200, 214]</li>
-                                    <li><strong>Análise Forense e Regex:</strong> Tratamento e limpeza fina de logs de sinalização utilizando Expressões Regulares estruturadas para mapear Call-IDs unificados, números de origem/destino e IPs de tráfego, limpando retransmissões repetidas através de estruturas de dados Pandas. [cite: 246, 247, 288, 290]</li>
+                                    <li><strong>Arquitetura e Escalonamento I/O:</strong> Remodelagem da stack Docker Compose (Loki, Postgres, Caddy, Prometheus) migrando o diretório raiz para partições dedicadas de grande capacidade, e criando rotinas de contingência idempotentes com interrupção forçada (<code>kill</code>) sob estresse de disco.</li>
+                                    <li><strong>Coletor Automatizado em Python:</strong> Desenvolvimento de um script parser de paginação dinâmica acoplado à API do Loki para mineração inteligente de chamadas contendo códigos de desconexão baseados no padrão <strong>Q.850 (Cause Codes)</strong>.</li>
+                                    <li><strong>Análise Forense e Regex:</strong> Tratamento e limpeza fina de logs de sinalização utilizando Expressões Regulares estruturadas para mapear Call-IDs unificados, números de origem/destino e IPs de tráfego, limpando retransmissões repetidas através de estruturas de dados Pandas.</li>
                                 </ul>
 
                                 <div class="case-badges">
                                     <span class="tag">SIP Sinalização</span> <span class="tag">Grafana Loki API</span> <span class="tag">Q.850 Cause Codes</span> <span class="tag">Docker Storage Migration</span> </div>
                             </div>
                             <div class="case-media">
-                                <img src="https://github.com/izaacmenezes/portfolio/blob/main/SIP%20OVERVIEW.png" alt="SIP Overview Dashboard">
-                                <img src="https://github.com/izaacmenezes/portfolio/blob/main/Reason%20Q.850.png" alt="Reason Massivo Q850 Dashboard">
-                                <img src="https://github.com/izaacmenezes/portfolio/blob/main/INVITE%20per%20SECOND.png" alt="INVITE per Second Telemetry">
+                                <img src="https://raw.githubusercontent.com/izaacmenezes/portfolio/main/SIP%20OVERVIEW.png" alt="SIP Overview Dashboard">
+                                <img src="https://raw.githubusercontent.com/izaacmenezes/portfolio/main/Reason%20Q.850.png" alt="Reason Massivo Q850 Dashboard">
+                                <img src="https://raw.githubusercontent.com/izaacmenezes/portfolio/main/INVITE%20per%20SECOND.png" alt="INVITE per Second Telemetry">
                                 <img src="https://raw.githubusercontent.com/izaacmenezes/portfolio/main/INVITE%20%26%20REGISTER.png" alt="INVITE and REGISTER Analytics">
                                 <img src="https://raw.githubusercontent.com/izaacmenezes/portfolio/main/RTCP.png" alt="QoS RTCP Jitter and Packet Loss">
                             </div>
                         </div>
                     </article>
-
                 </div>
             </div>
         </section>

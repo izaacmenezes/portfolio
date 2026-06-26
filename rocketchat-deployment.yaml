@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rocketchat
+  namespace: chat-production
+  labels:
+    app: rocketchat
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rocketchat
+  template:
+    metadata:
+      labels:
+        app: rocketchat
+    spec:
+      # REGRA: Força o K8s a colocar cada réplica em um Node diferente
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - rocketchat
+            topologyKey: "kubernetes.io/hostname"
+      containers:
+      - name: rocketchat
+        image: registry.rocket.chat/rocketchat/rocket.chat:7.0.0
+        ports:
+        - containerPort: 3000
+          name: http
+        env:
+        # CONEXÕES MASCARADAS DE BANCO DE DADOS EXTERNO
+        - name: MONGO_URL
+          value: "mongodb://admin:SENHA_OCULTA@mongodb.rede-interna.local:27017/rocketchat?replicaSet=rs0"
+        - name: MONGO_OPLOG_URL
+          value: "mongodb://admin:SENHA_OCULTA@mongodb.rede-interna.local:27017/local?replicaSet=rs0"
+        - name: ROOT_URL
+          value: "https://chat.dominio-da-empresa.com.br"
+        - name: PORT
+          value: "3000"
+        resources:
+          limits:
+            cpu: "2"
+            memory: "4Gi"
+          requests:
+            cpu: "500m"
+            memory: "1Gi"

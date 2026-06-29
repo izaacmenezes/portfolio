@@ -685,23 +685,23 @@
                         </div>
                     </article>
 
-<!-- CASE STUDY 3: SIP AI ANALYZER & TELECOM NOC -->
+<!-- CASE STUDY 3: TELEMETRIA AVANÇADA SIP & LOKI -->
                     <article class="case-study-card">
                         <div class="case-header">
                             <div class="case-title">
                                 <span>Case Study 03 // Telecomunicações & Observabilidade Avançada</span>
-                                SIP AI Analyzer: Telemetria Forense de Sinalização e Logs Loki
+                                Telemetria Avançada NOC: Observabilidade de Sinalização SIP e Logs Loki
                             </div>
                         </div>
                         <div class="case-grid">
                             <div class="case-info">
                                 <h4>Cenário e Desafio</h4>
-                                <p>Garantir a ingestão, indexação e monitoramento em tempo real de fluxos massivos de sinalização SIP. A infraestrutura enfrentava estouros de armazenamento severos e falhas de correlacionamento temporal devido ao volume massivo de requisições de operadoras parceiras em alta concorrência.</p>
+                                <p>Garantir a ingestão, indexação e monitoramento em tempo real de fluxos massivos de sinalização SIP. A infraestrutura enfrentava estouros de armazenamento severos e falhas de correlacionamento temporal devido ao volume massivo de requisições de operadoras parceiras em alta concorrência.[cite: 5]</p>
                                 
                                 <h4>Solução de Engenharia e Análise de Telemetria</h4>
                                 <ul>
-                                    <li><strong>Otimização de Escalonamento I/O:</strong> Remodelagem completa do ciclo de armazenamento do Docker (Loki, Postgres) migrando os volumes de dados para partições dimensionadas, e implementando rotinas idempotentes de expurgo automático de logs para prevenir travamentos de escrita sob estresse severo de disco.</li>
-                                    <li><strong>Análise Forense e Parser de Mensageria (Python):</strong> Desenvolvimento de um script parser acoplado à API do Loki que isola Call-IDs únicos através de Expressões Regulares (Regex), eliminando o ruído de retransmissões repetidas via estruturas do Pandas.</li>
+                                    <li><strong>Otimização de Escalonamento I/O:</strong> Remodelagem completa do ciclo de armazenamento do Docker (Loki, Postgres) migrando os volumes de dados para partições dimensionadas, e implementando rotinas idempotentes de expurgo automático de logs para prevenir travamentos de escrita sob estresse severo de disco.[cite: 5]</li>
+                                    <li><strong>Análise Forense e Parser de Mensageria (Python):</strong> Desenvolvimento de um script parser acoplado à API do Loki que isola Call-IDs únicos através de Expressões Regulares (Regex), eliminando o ruído de retransmissões repetidas via estruturas do Pandas.[cite: 5]</li>
                                     <li><strong>Diagnóstico de Incidentes via Dashboards:</strong> Conforme evidenciado na telemetria integrada, os painéis expõem com precisão cirúrgica um comportamento anômalo às 17:10. Houve uma queda abrupta e coordenada nas métricas de <em>INVITE per Second</em> e nos indicadores globais de ASR/NER, acompanhada por um pico subsequente de controle em métodos lógicos de desconexão de chamadas (picos massivos de <code>CANCEL</code> e respostas <code>487 Request Terminated</code>).</li>
                                     <li><strong>Monitoramento de Qualidade de Mídia (QoS RTCP):</strong> Implementação de painéis dedicados para rastrear a perda de pacotes (Packet Loss) e variações de latência (Jitter) de forma sincronizada com as flutuações de tráfego, garantindo visibilidade analítica e proativa de ponta a ponta na malha de voz.</li>
                                 </ul>

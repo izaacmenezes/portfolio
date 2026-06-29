@@ -677,13 +677,13 @@
                                 <ul>
                                     <li><strong>Implantação e Administração Estruturada:</strong> Arquitetura completa da plataforma GLPI, modelando o catálogo de serviços, matriz de categorização de incidentes/requisições e fluxos de aprovação automatizados por regras de negócio.</li>
                                     <li><strong>Customização Avançada e Plugins:</strong> Extensão das capacidades nativas do ecossistema através de instalação, parametrização e tuning de plugins estratégicos para gestão de inventário dinâmico, bases de conhecimento e relatórios gerenciais personalizados.</li>
-                                    <li><strong>Engine ChatOps para Controle de SLA:</strong> Desenvolvimento de um motor de integração assíncrona que consome metadados lógicos da API do GLPI para despacho instantâneo de alertas críticos em canais operacionais assim que o progresso do ticket atinge a marca de 90%.[cite: 4]</li>
-                                    <li><strong>Cultura Data-Driven e Relatórios:</strong> Construção de relatórios de volumetria estruturados para auditoria forense e tomada de decisão executiva, garantindo total rastreabilidade histórica e cumprimento rígido das metas de conformidade.[cite: 4]</li>
-                                    <li><strong>Automação de Infraestrutura e Backup:</strong> Desenvolvimento de rotinas cronológicas integradas para validação e auditoria automatizada de integridade de backups massivos (SQL e anexos), garantindo o isolamento lógico das mídias em volumes baseados no protocolo <strong>iSCSI</strong>.[cite: 4]</li>
+                                    <li><strong>Engine ChatOps para Controle de SLA:</strong> Desenvolvimento de um motor de integração assíncrona que consome metadados lógicos da API do GLPI para despacho instantâneo de alertas críticos em canais operacionais assim que o progresso do ticket atinge a marca de 90%.</li>
+                                    <li><strong>Cultura Data-Driven e Relatórios:</strong> Construção de relatórios de volumetria estruturados para auditoria forense e tomada de decisão executiva, garantindo total rastreabilidade histórica e cumprimento rígido das metas de conformidade.</li>
+                                    <li><strong>Automação de Infraestrutura e Backup:</strong> Desenvolvimento de rotinas cronológicas integradas para validação e auditoria automatizada de integridade de backups massivos (SQL e anexos), garantindo o isolamento lógico das mídias em volumes baseados no protocolo <strong>iSCSI</strong>.</li>
                                 </ul>
 
                                 <div class="case-badges">
-                                    <span class="tag">GLPI Enterprise</span> <span class="tag">ITSM Governance</span>[cite: 4] <span class="tag">ChatOps Automation</span>[cite: 4] <span class="tag">iSCSI Target</span>[cite: 4]
+                                    <span class="tag">GLPI Enterprise</span> <span class="tag">ITSM Governance</span> <span class="tag">ChatOps Automation</span> <span class="tag">iSCSI Target</span>
                                 </div>
                             </div>
                             <div class="case-media">
@@ -704,12 +704,12 @@
                         <div class="case-grid">
                             <div class="case-info">
                                 <h4>Cenário e Desafio</h4>
-                                <p>Garantir a ingestão, indexação e monitoramento em tempo real de fluxos massivos de sinalização SIP. A infraestrutura enfrentava estouros de armazenamento severos e falhas de correlacionamento temporal devido ao volume massivo de requisições de operadoras parceiras em alta concorrência.[cite: 5]</p>
+                                <p>Garantir a ingestão, indexação e monitoramento em tempo real de fluxos massivos de sinalização SIP. A infraestrutura enfrentava estouros de armazenamento severos e falhas de correlacionamento temporal devido ao volume massivo de requisições de operadoras parceiras em alta concorrência.</p>
                                 
                                 <h4>Solução de Engenharia e Análise de Telemetria</h4>
                                 <ul>
-                                    <li><strong>Otimização de Escalonamento I/O:</strong> Remodelagem completa do ciclo de armazenamento do Docker (Loki, Postgres) migrando os volumes de dados para partições dimensionadas, e implementando rotinas idempotentes de expurgo automático de logs para prevenir travamentos de escrita sob estresse severo de disco.[cite: 5]</li>
-                                    <li><strong>Análise Forense e Parser de Mensageria (Python):</strong> Desenvolvimento de um script parser acoplado à API do Loki que isola Call-IDs únicos através de Expressões Regulares (Regex), eliminando o ruído de retransmissões repetidas via estruturas do Pandas.[cite: 5]</li>
+                                    <li><strong>Otimização de Escalonamento I/O:</strong> Remodelagem completa do ciclo de armazenamento do Docker (Loki, Postgres) migrando os volumes de dados para partições dimensionadas, e implementando rotinas idempotentes de expurgo automático de logs para prevenir travamentos de escrita sob estresse severo de disco.</li>
+                                    <li><strong>Análise Forense e Parser de Mensageria (Python):</strong> Desenvolvimento de um script parser acoplado à API do Loki que isola Call-IDs únicos através de Expressões Regulares (Regex), eliminando o ruído de retransmissões repetidas via estruturas do Pandas.</li>
                                     <li><strong>Diagnóstico de Incidentes via Dashboards:</strong> Conforme evidenciado na telemetria integrada, os painéis expõem com precisão cirúrgica um comportamento anômalo às 17:10. Houve uma queda abrupta e coordenada nas métricas de <em>INVITE per Second</em> e nos indicadores globais de ASR/NER, acompanhada por um pico subsequente de controle em métodos lógicos de desconexão de chamadas (picos massivos de <code>CANCEL</code> e respostas <code>487 Request Terminated</code>).</li>
                                     <li><strong>Monitoramento de Qualidade de Mídia (QoS RTCP):</strong> Implementação de painéis dedicados para rastrear a perda de pacotes (Packet Loss) e variações de latência (Jitter) de forma sincronizada com as flutuações de tráfego, garantindo visibilidade analítica e proativa de ponta a ponta na malha de voz.</li>
                                 </ul>
